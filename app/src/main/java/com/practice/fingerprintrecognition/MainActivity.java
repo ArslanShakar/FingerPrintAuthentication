@@ -32,7 +32,7 @@ import javax.crypto.SecretKey;
 public class MainActivity extends AppCompatActivity {
 
     // Declare a string variable for the key we’re going to use in our fingerprint authentication
-    private static final String KEY_NAME = "123456789";
+    private static final String KEY_NAME = "randomAndroidKey";
     private Cipher cipher;
     private KeyStore keyStore;
     private KeyGenerator keyGenerator;

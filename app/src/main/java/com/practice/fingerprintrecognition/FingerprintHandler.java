@@ -1,5 +1,6 @@
 package com.practice.fingerprintrecognition;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
@@ -7,6 +8,8 @@ import android.Manifest;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 @TargetApi(Build.VERSION_CODES.M)
@@ -65,6 +68,9 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             FingerprintManager.AuthenticationResult result) {
 
         Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+
+        ImageView imageView = ((AppCompatActivity)context).findViewById(R.id.imageView);
+        imageView.setImageResource(R.mipmap.ic_varified);
     }
 
 }
